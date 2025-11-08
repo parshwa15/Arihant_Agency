@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dealer Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="bg-light">
+  <div class="container py-4">
+    <div class="text-center mb-3">
+      <h1 class="fw-bold">💧 Dealer Dashboard</h1>
+    </div>
+
+    <div class="card shadow-sm mb-3">
+      <div class="card-body">
+        <div class="row g-2 align-items-center">
+          <div class="col-md-3">
+            <input id="fileInput" type="file" class="form-control" accept=".xlsx,.xls">
+          </div>
+
+          <div class="col-md-4">
+            <select id="dealerSelect" class="form-select">
+              <option value="" selected>-- Select Dealer --</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <select id="monthSelect" class="form-select">
+              <option value="ALL" selected>ALL Months</option>
+            </select>
+          </div>
+
+          <div class="col-md-2">
+            <button id="searchBtn" class="btn btn-primary w-100">Search</button>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-12 text-end">
+            <button id="exportPdfBtn" class="btn btn-outline-primary me-2">Export PDF</button>
+            <button id="exportExcelBtn" class="btn btn-outline-success">Export Excel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="alertSpot" class="my-3"></div>
+
+    <div class="d-flex gap-3 mb-2" id="summaryRow" style="display:none;">
+      <div class="badge-tile"><strong>🧾 Total Items:</strong> <span id="totalItems">0</span></div>
+      <div class="badge-tile"><strong>🏪 Dealer Code:</strong> <span id="dealerCode">-</span></div>
+      <div class="badge-tile"><strong>🗓️ Month:</strong> <span id="monthLabel">All</span></div>
+    </div>
+
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-sm table-hover align-middle" id="dataTable">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

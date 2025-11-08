@@ -1,0 +1,4 @@
+body { font-size: 0.95rem; }
+.table thead th { position: sticky; top: 0; background: #a7b815; color: #fff; }
+.table-responsive { max-height: 65vh; }
+.badge-tile { background: #f1f5f9; border: 1px solid #e2e8f0; padding: 8px 12px; border-radius: 8px; }
